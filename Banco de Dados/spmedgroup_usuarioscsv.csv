@@ -1,0 +1,12 @@
+IdUsuario,IdTiposUsuario,Senha,Email
+1,1,1234,fernando.strada@spmedicalgroup.com.br
+2,2,1234m,ricardo.lemos@spmedicalgroup.com.br
+3,2,1234m,roberto.possarle@spmedicalgroup.com.br
+4,2,1234m,helena.souza@spmedicalgroup.com.br
+5,3,1234p,ligia@gmail.com
+6,3,1234p,alexandre@gmail.com
+7,3,1234p,fernando@gmail.com
+8,3,1234p,henrique@gmail.com
+9,3,1234p,joao@hotmail.com
+10,3,1234p,bruno@gmail.com
+11,3,1234p,mariana@outlook.com

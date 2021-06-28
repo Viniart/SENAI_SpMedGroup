@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "1321ced9-2834-477c-9587-be5750760965",
+		"name": "SENAI_SpMedGroup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"ligia@gmail.com\",\r\n    \"senha\" : \"1234p\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000//api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TiposUsuarios",
+			"item": [
+				{
+					"name": "TiposUsuarios.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Espectador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/tiposusuarios/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposusuarios",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposUsuarios.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tiposusuarios/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposusuarios",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposUsuarios.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TiposUsuario1\" : \"Espectador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/tiposusuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposusuarios"
+							]
+						},
+						"description": "Método para cadastrar gêneros(Nome de generos) do projeto Filmes"
+					},
+					"response": []
+				},
+				{
+					"name": "TiposUsuarios.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5CI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6ImFkbWluaXN0cmFkb3IiLCJDbGFpbSBwZXJzb25hbGl6YWRhIjoiVmFsb3IgdGVzdGUiLCJleHAiOjE2MTg1MTYxMTUsImlzcyI6IkZpbG1lcy53ZWJBcGkiLCJhdWQiOiJGaWxtZXMud2ViQXBpIn0.CAgC8l1ueTCw09nuXn5H7btIRH3MW8pibnZmpos1BtM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tiposusuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposusuarios"
+							]
+						},
+						"description": "Teste para o método de listar todos os gêneros do projeto \"Filmes\" do 2º semestre do curso de Desenvolvimento de Sistemas do SENAI"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Usuarios.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5CI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6ImFkbWluaXN0cmFkb3IiLCJDbGFpbSBwZXJzb25hbGl6YWRhIjoiVmFsb3IgdGVzdGUiLCJleHAiOjE2MTg1MTYxMTUsImlzcyI6IkZpbG1lcy53ZWJBcGkiLCJhdWQiOiJGaWxtZXMud2ViQXBpIn0.CAgC8l1ueTCw09nuXn5H7btIRH3MW8pibnZmpos1BtM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						},
+						"description": "Teste para o método de listar todos os gêneros do projeto \"Filmes\" do 2º semestre do curso de Desenvolvimento de Sistemas do SENAI"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"vini@vini.com\",\r\n    \"senha\" : \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						},
+						"description": "Método para cadastrar gêneros(Nome de generos) do projeto Filmes"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"aloha@aloha.com\",\r\n    \"senha\" : \"viva\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consultas",
+			"item": [
+				{
+					"name": "Consultas.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IdPaciente\" : \"3\",\r\n    \"IdMedico\" : \"2\",\r\n    \"IdSituacao\": \"1\",\r\n    \"DataConsulta\": \"23/04/2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IdPaciente\" : \"5\",\r\n    \"IdMedico\" : \"1\",\r\n    \"IdSituacao\": \"1\",\r\n    \"DataConsulta\": \"24/04/2021\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas"
+							]
+						},
+						"description": "Método para cadastrar gêneros(Nome de generos) do projeto Filmes"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5CI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6ImFkbWluaXN0cmFkb3IiLCJDbGFpbSBwZXJzb25hbGl6YWRhIjoiVmFsb3IgdGVzdGUiLCJleHAiOjE2MTg1MTYxMTUsImlzcyI6IkZpbG1lcy53ZWJBcGkiLCJhdWQiOiJGaWxtZXMud2ViQXBpIn0.CAgC8l1ueTCw09nuXn5H7btIRH3MW8pibnZmpos1BtM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas"
+							]
+						},
+						"description": "Teste para o método de listar todos os gêneros do projeto \"Filmes\" do 2º semestre do curso de Desenvolvimento de Sistemas do SENAI"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.ListarPorMedico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5CI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6ImFkbWluaXN0cmFkb3IiLCJDbGFpbSBwZXJzb25hbGl6YWRhIjoiVmFsb3IgdGVzdGUiLCJleHAiOjE2MTg1MTYxMTUsImlzcyI6IkZpbG1lcy53ZWJBcGkiLCJhdWQiOiJGaWxtZXMud2ViQXBpIn0.CAgC8l1ueTCw09nuXn5H7btIRH3MW8pibnZmpos1BtM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/medico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"medico"
+							]
+						},
+						"description": "Teste para o método de listar todos os gêneros do projeto \"Filmes\" do 2º semestre do curso de Desenvolvimento de Sistemas do SENAI"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.ListarPorPaciente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5CI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6ImFkbWluaXN0cmFkb3IiLCJDbGFpbSBwZXJzb25hbGl6YWRhIjoiVmFsb3IgdGVzdGUiLCJleHAiOjE2MTg1MTYxMTUsImlzcyI6IkZpbG1lcy53ZWJBcGkiLCJhdWQiOiJGaWxtZXMud2ViQXBpIn0.CAgC8l1ueTCw09nuXn5H7btIRH3MW8pibnZmpos1BtM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/paciente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"paciente"
+							]
+						},
+						"description": "Teste para o método de listar todos os gêneros do projeto \"Filmes\" do 2º semestre do curso de Desenvolvimento de Sistemas do SENAI"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultas.AdicionarDescricao",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Descricao\" : \"Paciente está morrendo!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clinicas",
+			"item": [
+				{
+					"name": "Clinicas.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Cnpj\" : \"12345655765\",\r\n    \"NomeFantasia\" : \"Clinica Vida\",\r\n    \"RazaoSocial\" : \"SP Med Group\",\r\n    \"Endereco\" : \"Avenida São João, 256\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clinicas.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clinicas.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Cnpj\" : \"12345655765\",\r\n    \"NomeFantasia\" : \"Clinica Viva\",\r\n    \"RazaoSocial\" : \"SP Group\",\r\n    \"Endereco\" : \"Avenida São João, 2506\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas"
+							]
+						},
+						"description": "Método para cadastrar gêneros(Nome de generos) do projeto Filmes"
+					},
+					"response": []
+				},
+				{
+					"name": "Clinicas.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5CI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6ImFkbWluaXN0cmFkb3IiLCJDbGFpbSBwZXJzb25hbGl6YWRhIjoiVmFsb3IgdGVzdGUiLCJleHAiOjE2MTg1MTYxMTUsImlzcyI6IkZpbG1lcy53ZWJBcGkiLCJhdWQiOiJGaWxtZXMud2ViQXBpIn0.CAgC8l1ueTCw09nuXn5H7btIRH3MW8pibnZmpos1BtM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas"
+							]
+						},
+						"description": "Teste para o método de listar todos os gêneros do projeto \"Filmes\" do 2º semestre do curso de Desenvolvimento de Sistemas do SENAI"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
